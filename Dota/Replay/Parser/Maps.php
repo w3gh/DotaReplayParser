@@ -10,7 +10,6 @@
 
 
 /**
- * Description of Maps
  *
  * @author Nikolay Kosturin <jilizart@gmail.com>
  * @version $Id:$
@@ -22,6 +21,15 @@ class Dota_Replay_Parser_Maps {
 
   const DEFAULT_XML_MAP = 'dota.allstars.v6.70.xml';
 
+	/**
+	 * Checks Map File Path, and if it exist, return it
+	 *
+	 * @static
+	 * @throws Dota_Replay_Parser_Exception
+	 * @param $mapname xml map file
+	 * 
+	 * @return string path to map
+	 */
   public static function getMapFilePath($mapname)
   {
     $filename = dirname(__FILE__) . '/Maps/' . $mapname;
@@ -35,12 +43,12 @@ class Dota_Replay_Parser_Maps {
   }
 
   /**
-   * Support function for determening the Dota version and appropriate XML file
+   * Determine the Dota version and appropriate XML file
    * based on the map name extracted from the replay data
    *
-   * @param mixed $mapName - Map name extracted from the replay
-   * @param mixed $dota_major - Address to return the Dota Major version number to
-   * @param mixed $dota_minor - Address to return the Dota Minor version number to
+   * @param mixed $mapName Map name extracted from the replay
+   * @param mixed $dota_major number of Dota Major version
+   * @param mixed $dota_minor number of Dota Minor version
    *
    * @return Returns the filename of the XML file to parse the replay with
    */

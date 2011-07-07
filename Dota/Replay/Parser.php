@@ -46,8 +46,6 @@ class Dota_Replay_Parser
   public $Items;
   public $info;   // Stores general Map info like version, etc.
 
-
-
   /**
    * Links ID's to the appropriate Object.
    * @var array
